@@ -7,7 +7,7 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
   const [generatedContent, setGeneratedContent] = useState('');
 
-  const generateContent = async (selectedOption) => {
+  const generateContent = async (selectedOption:string) => {
     setIsLoading(true);
     try {
       const question = `Generate ${selectedOption} for the given abstract:\n${abstract}`;
@@ -59,8 +59,8 @@ export default function Home() {
                 onChange={(event) => setAbstract(event.target.value)}
                 className="border-2 text-black rounded-md p-4 text-center drop-shadow-xl"
                 placeholder="Paste your abstract here"
-                rows="11"
-                cols="50"
+                rows={11}
+                cols={50}
               ></textarea>
             </div>
             <div className='text-black m-3 p-3  bg-sky-500 rounded-md'>
@@ -87,8 +87,8 @@ export default function Home() {
             <textarea
               className="border-2 text-black rounded-md p-4 text-center drop-shadow-xl"
               id=""
-              cols="50"
-              rows="15"
+              cols={50}
+              rows={15}
               placeholder="Here you will get the generated response from Worqhat"
               value={isLoading ? 'Generating content...' : generatedContent}
               readOnly
