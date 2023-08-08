@@ -51,6 +51,7 @@ export default function Home() {
         </h1>
         <div className="flex flex-col md:flex-row">
           <div className="flex-1 mb-4 md:mb-0 md:mr-4">
+            <h2 className='m-1 p-1 '>Paste your abstract here:</h2>
             <textarea
               value={abstract}
               onChange={(event) => setAbstract(event.target.value)}
@@ -80,6 +81,7 @@ export default function Home() {
             </div>
           </div>
           <div className="flex-1">
+          <h2 className='m-1 p-1 '>Here you will get the generated response from Worqhat:</h2>
             <textarea
               className="border-2 text-black rounded-md p-4 text-center drop-shadow-xl w-full h-40 md:h-96"
               id=""
